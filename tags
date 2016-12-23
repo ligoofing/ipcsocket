@@ -1,0 +1,20 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CONTROL_LEN	clientpipe.c	/^static const int CONTROL_LEN = CMSG_LEN(sizeof(int));$/;"	v	file:
+CONTROL_LEN	serverpipe.c	/^static const int CONTROL_LEN = CMSG_LEN(sizeof(int));$/;"	v	file:
+PROGS	Makefile	/^PROGS = client server$/;"	m
+TocEntry	Unix_domain_sockets.html	/^  function TocEntry(el, text, toclevel) {$/;"	f
+getText	Unix_domain_sockets.html	/^  function getText(el) {$/;"	f
+main	client.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	server.c	/^int main(int argc, char *argv[]) {$/;"	f
+recv_fd	clientpipe.c	/^int recv_fd(int fd)$/;"	f
+reinstall	Unix_domain_sockets.html	/^  function reinstall() {$/;"	f
+reinstallAndRemoveTimer	Unix_domain_sockets.html	/^  function reinstallAndRemoveTimer() {$/;"	f
+server_send_fd	serverpipe.c	/^void server_send_fd(int fd, int fd_to_send)$/;"	f
+socket_path	client.c	/^char *socket_path = "\\0";$/;"	v
+socket_path	server.c	/^char *socket_path = "\\0hidden";$/;"	v
+tocEntries	Unix_domain_sockets.html	/^  function tocEntries(el, toclevels) {$/;"	f
