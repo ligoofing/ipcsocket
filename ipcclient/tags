@@ -1,0 +1,19 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CONTROL_LEN	clientpipe.c	/^static const int CONTROL_LEN = CMSG_LEN(sizeof(int));$/;"	v	file:
+MAINBASE	mainbase.h	10;"	d
+NOTIFY	notification.h	9;"	d
+PROGS	Makefile	/^PROGS = clientmain$/;"	m
+client_socket_fd	mainbase.h	/^static int client_socket_fd;$/;"	v
+get_write_pipe	notification.c	/^int get_write_pipe()$/;"	f
+init_notify	notification.c	/^int init_notify(int fd)$/;"	f
+init_notify_flag	notification.c	/^char init_notify_flag[20] = "_initnotify";$/;"	v
+main	clientmain.c	/^int main(int argc, char *argv[]) {$/;"	f
+notify_write_fd	notification.c	/^static int notify_write_fd; \/\/ pipe[1]form server$/;"	v	file:
+open_client_socket	clientsocket.c	/^int open_client_socket(char* socket_path)$/;"	f
+recv_fd	clientpipe.c	/^int recv_fd(int fd)$/;"	f
+send_notification	notification.c	/^int send_notification(char* notify)$/;"	f

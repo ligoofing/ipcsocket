@@ -2,7 +2,7 @@ PROGS = clientmain
 
 all: $(PROGS)
 
-clientmain: clientmain.c clientpipe.c clientsocket.c
+clientmain: clientmain.c clientpipe.c clientsocket.c notification.c
 
 .PHONY: clean
 

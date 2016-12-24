@@ -21,22 +21,32 @@ int main(int argc, char *argv[]) {
 			continue;
 		}
 
-		int pipefd[2];
-		if (0 != pipe(pipefd)) {
-			printf("create pipe err ! \n");
-		}
+        rc = read(cl, buf, 20);
+		printf("server socket recv %d, %s \n", rc, buf);
+		if(strcmp(buf, "_initnotify") == 0)
+		{
+            printf("server init notify! \n");
 
-		server_send_fd(cl, pipefd[1]);
+	    	int pipefd[2];
+	    	if (0 != pipe(pipefd)) {
+		    	printf("create pipe err ! \n");
+	    	}
 
-		while ((rc = read(pipefd[0], buf, sizeof(buf))) > 0) {
-			printf("read %u bytes: %.*s\n", rc, rc, buf);
+	    	server_send_fd(cl, pipefd[1]);
+
+		    while ((rc = read(pipefd[0], buf, sizeof(buf))) > 0) {
+		    	printf("read %u bytes: %.*s\n", rc, rc, buf);
+	    	}
+	    	if (rc == -1) {
+		    	perror("read");
+		    	exit(-1);
+	     	} else if (rc == 0) {
+			    printf("\n");
+			    close(cl);
+	    	}
 		}
-		if (rc == -1) {
-			perror("read");
-			exit(-1);
-		} else if (rc == 0) {
-			printf("\n");
-			close(cl);
+		else{
+            printf("not init notify \n");
 		}
 	}
 

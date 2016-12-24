@@ -4,17 +4,23 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-CONTROL_LEN	clientpipe.c	/^static const int CONTROL_LEN = CMSG_LEN(sizeof(int));$/;"	v	file:
-CONTROL_LEN	serverpipe.c	/^static const int CONTROL_LEN = CMSG_LEN(sizeof(int));$/;"	v	file:
-PROGS	Makefile	/^PROGS = client server$/;"	m
-TocEntry	Unix_domain_sockets.html	/^  function TocEntry(el, text, toclevel) {$/;"	f
-getText	Unix_domain_sockets.html	/^  function getText(el) {$/;"	f
-main	client.c	/^int main(int argc, char *argv[]) {$/;"	f
-main	server.c	/^int main(int argc, char *argv[]) {$/;"	f
-recv_fd	clientpipe.c	/^int recv_fd(int fd)$/;"	f
-reinstall	Unix_domain_sockets.html	/^  function reinstall() {$/;"	f
-reinstallAndRemoveTimer	Unix_domain_sockets.html	/^  function reinstallAndRemoveTimer() {$/;"	f
-server_send_fd	serverpipe.c	/^void server_send_fd(int fd, int fd_to_send)$/;"	f
-socket_path	client.c	/^char *socket_path = "\\0";$/;"	v
-socket_path	server.c	/^char *socket_path = "\\0hidden";$/;"	v
-tocEntries	Unix_domain_sockets.html	/^  function tocEntries(el, toclevels) {$/;"	f
+CONTROL_LEN	ipcclient/clientpipe.c	/^static const int CONTROL_LEN = CMSG_LEN(sizeof(int));$/;"	v	file:
+CONTROL_LEN	ipcserver/serverpipe.c	/^static const int CONTROL_LEN = CMSG_LEN(sizeof(int));$/;"	v	file:
+MAINBASE	ipcclient/mainbase.h	10;"	d
+MAINBASE	ipcserver/mainbase.h	10;"	d
+NOTIFY	ipcclient/notification.h	9;"	d
+PROGS	ipcclient/Makefile	/^PROGS = clientmain$/;"	m
+PROGS	ipcserver/Makefile	/^PROGS = servermain$/;"	m
+client_socket_fd	ipcclient/mainbase.h	/^static int client_socket_fd;$/;"	v
+get_write_pipe	ipcclient/notification.c	/^int get_write_pipe()$/;"	f
+init_notify	ipcclient/notification.c	/^char* init_notify = "_initnotify";$/;"	v
+init_notify	ipcclient/notification.c	/^int init_notify()$/;"	f
+main	ipcclient/clientmain.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	ipcserver/servermain.c	/^int main(int argc, char *argv[]) {$/;"	f
+notify_write_fd	ipcclient/notification.c	/^static int notify_write_fd; \/\/ pipe[1]form server$/;"	v	file:
+open_client_socket	ipcclient/clientsocket.c	/^int open_client_socket(char* socket_path)$/;"	f
+open_server_socket	ipcserver/serversocket.c	/^int open_server_socket(char* socket_path) {$/;"	f
+recv_fd	ipcclient/clientpipe.c	/^int recv_fd(int fd)$/;"	f
+send_notification	ipcclient/notification.c	/^int send_notification(char* notify)$/;"	f
+server_send_fd	ipcserver/serverpipe.c	/^void server_send_fd(int fd, int fd_to_send)$/;"	f
+socket_path	ipcserver/servermain.c	/^char *socket_path = "\\0hidden";$/;"	v

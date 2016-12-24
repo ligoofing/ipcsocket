@@ -17,4 +17,7 @@
 #include <string.h>
 #include <sys/un.h>
 
+
+int client_socket_fd;
+
 #endif
